@@ -45,21 +45,27 @@ body {
     padding: 0 1rem;
 
     min-height: 3rem;
-    max-width: 30rem;
+    max-width: min(30rem, 90vw);
     width: 100%;
 
     display: flex;
     align-items: center;
 }
 
+#searchbar:has(:focus) {
+    border: 1px solid #303134;
+    background-color: #303134;
+}
+
 #searchtext {
     outline: none;
 
     margin: auto 0;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
 
     width: 100%;
     line-break: anywhere;
+    white-space: pre-wrap;
 }
 
 #search {
