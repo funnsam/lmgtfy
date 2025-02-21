@@ -7,8 +7,8 @@ html, body {
     padding: 0;
     width: 100%;
 
-    background-color: #202124;
-    color: #e8eaed;
+    background-color: #1e1e2e;
+    color: #cdd6f4;
 }
 
 html {
@@ -62,7 +62,7 @@ body {
 }
 
 #searchbar {
-    border: 1px solid #5f6368;
+    border: 1px solid #45475a;
     border-radius: 1.5em;
 
     padding: 0 1em;
@@ -76,8 +76,8 @@ body {
 }
 
 #searchbar:has(:focus) {
-    border: 1px solid #303134;
-    background-color: #303134;
+    border: 1px solid #313244;
+    background-color: #313244;
 }
 
 #searchtext {
@@ -93,13 +93,13 @@ body {
 
 #search {
     outline: none;
-    border: 1px solid #303134;
+    border: 1px solid #313244;
     border-radius: 0.25em;
-    background-color: #303134;
-    color: #e8eaed;
+    background-color: #313244;
+    color: #cdd6f4;
     font-size: 1em;
 
-    padding: 0.5em 0.75em;
+    padding: 0.5em 1em;
 }
 
 @keyframes scale {
@@ -108,7 +108,7 @@ body {
     100% { transform: scale(1); }
 }
 
-#search:focus, #search:hover { border-color: #5f6368; }
+#search:focus, #search:hover { border-color: #45475a; }
 
 #step {
     margin: 1em auto 0 auto;
