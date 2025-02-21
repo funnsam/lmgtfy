@@ -1,5 +1,6 @@
 const params = new URLSearchParams(window.location.search);
 const query = params.get("q");
+const nice = params.has("nice");
 
 const search_text = document.getElementById("searchtext");
 const step_text = document.getElementById("step");
@@ -35,15 +36,15 @@ if (query !== null) {
         }, 100));
     }
 
-    step_text.innerText = "Step 1. type your question";
+    step_text.innerText = "Step 1: type your question into the search bar";
     (new Promise((resolve) => {
         setTimeout(() => {
-            window.getSelection().selectAllChildren(search_text);
+            search_text.focus();
             type_letters().then(resolve);
         }, 3000);
     })).then(() => {
         setTimeout(() => {
-            step_text.innerText = "Step 2. click on Google search button";
+            step_text.innerText = "Step 2: click on Google search button";
 
             search_btn.style.animationName = "scale";
             search_btn.style.animationDuration = "1s";
@@ -51,7 +52,9 @@ if (query !== null) {
 
             search_btn.onclick = () => {
                 window.location = "https://www.google.com/search" + window.location.search;
-                step_text.innerText = "c'mon do i really need to teach you this?";
+                step_text.innerText = nice ?
+                    "Nice! You did it!" :
+                    "c'mon do i really need to teach you this?";
             };
         }, 1000);
     });
