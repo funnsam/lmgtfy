@@ -6,46 +6,69 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100%;
 
     background-color: #202124;
     color: #e8eaed;
 }
 
+html {
+    height: 100% !important;
+}
+
 body {
+    padding: 1em;
+    min-height: 100% !important;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1em;
 
     font-size: 12pt;
     font-family: "Arial", sans-serif;
 }
 
 #google {
-    margin: auto auto 0 auto;
-    max-height: 10rem;
-    flex-grow: 1;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    flex: 1;
+}
+
+#google > img {
+    max-height: 10em;
+    margin-top: auto;
+}
+
+#google > * {
+    margin: 0 auto;
+}
+
+#google > *:last-child {
+    margin-bottom: auto;
 }
 
 #searcharea {
-    min-height: 3rem;
-    max-width: 30rem;
+    min-height: 3em;
+    max-width: 30em;
     width: 100%;
+    flex: 2;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 1em;
 }
 
 #searchbar {
     border: 1px solid #5f6368;
-    border-radius: 1.5rem;
+    border-radius: 1.5em;
 
-    padding: 0 1rem;
+    padding: 0 1em;
 
-    min-height: 3rem;
-    max-width: min(30rem, 90vw);
+    min-height: 3em;
+    max-width: min(30em, 90vw);
     width: 100%;
 
     display: flex;
@@ -61,7 +84,7 @@ body {
     outline: none;
 
     margin: auto 0;
-    padding: 0.5rem 0;
+    padding: 0.5em 0;
 
     width: 100%;
     line-break: anywhere;
@@ -71,12 +94,12 @@ body {
 #search {
     outline: none;
     border: 1px solid #303134;
-    border-radius: 0.25rem;
+    border-radius: 0.25em;
     background-color: #303134;
     color: #e8eaed;
-    font-size: 1rem;
+    font-size: 1em;
 
-    padding: 0.5rem 0.75rem;
+    padding: 0.5em 0.75em;
 }
 
 @keyframes scale {
@@ -88,6 +111,11 @@ body {
 #search:focus, #search:hover { border-color: #5f6368; }
 
 #step {
-    margin: 2rem auto auto auto;
-    flex-grow: 0.6;
+    margin: 1em auto 0 auto;
+}
+
+#disclaimer {
+    margin-top: auto;
+    justify-self: flex-end;
+    font-size: 0.75em;
 }
